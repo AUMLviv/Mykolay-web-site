@@ -7,8 +7,8 @@ setup_git() {
 
 commit_website_files() {
   git checkout -b gh-pages
-  rm -rf `ls -A -1  | grep -v dist`
-  ls dist/* .
+  rm -rf `ls -A -1 | grep -v -e dist -e .git`
+  mv dist/* .
   rm -r dist
   git add .
   git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
@@ -16,7 +16,7 @@ commit_website_files() {
 
 upload_files() {
   git remote add origin-pages https://${GH_TOKEN}@github.com/AUMLviv/Mykolay-web-site.git > /dev/null 2>&1
-  git push --quiet --set-upstream origin-pages gh-pages
+  git push --quiet --force --set-upstream origin-pages gh-pages
 }
 
 setup_git
