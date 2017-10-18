@@ -16,7 +16,7 @@ before_install:
 cache:
   yarn: true
 script:
-- gulp build
+- gulp
 after_success:
 - ".travis/push.sh"
 env:
