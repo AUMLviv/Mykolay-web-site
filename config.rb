@@ -44,7 +44,15 @@ page '/*.txt', layout: false
 #   activate :minify_css
 #   activate :minify_javascript
 # end
-#
+
+# disable layout
+page ".htaccess.apache", :layout => false
+
+# rename file after build
+after_build do
+  File.rename 'build/.htaccess.apache', 'build/.htaccess'
+end
+
 activate :external_pipeline,
   name: :gulp,
   command: build? ? 'gulp' : 'gulp serve',

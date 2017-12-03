@@ -41,27 +41,25 @@
     {
       "image": "images/ulia_radetska.jpg",
       "name": "Юля Радецька",
-      "title": "Координатор волонтерів Галицького і Личаківського районів",
+      "title": "Координатор Залізничного району",
       "facebook": "https://www.facebook.com/profile.php?id=100011484286185"
     },
     {
       "image": "images/demchyshyn.jpg",
-      "name": "Богдан Демчишин",
+      "name": "Юстина Сигінь",
       "title": "Координатор волонтерів Сихівського району",
-      "facebook": "https://www.facebook.com/demchyshyn.b",
-      "email": "q2loop@gmail.com"
+      "facebook": "https://www.facebook.com/yustyna.sygin"
     },
     {
       "image": "images/natalya_small.jpg",
-      "name": "Наталія Вербова",
+      "name": "Ростик Секета",
       "title": "Координатор волонтерів Франківського району",
-      "facebook": "https://www.facebook.com/natalia.verbova?fref=ts",
-      "email": "lonelyted@gmail.com"
+      "facebook": "https://www.facebook.com/rseketa"
     },
     {
       "image": "images/sergey_kozyuk.jpg",
       "name": "Сергій Козюк",
-      "title": "Координатор волонтерів Залізничного району",
+      "title": "Відповідальний за концерт",
       "facebook": "https://www.facebook.com/serhij.kozjuk?fref=ts",
       "email": "seryjkozyk11@gmail.com"
     },
@@ -71,6 +69,12 @@
       "title": "Координатор волонтерів Шевченківського району",
       "facebook": "https://www.facebook.com/profile.php?id=100007069306575&fref=ts",
       "email": "iborshovskyi@gmail.com"
+    },
+    {
+      "image": "images/igor-borshovskyy-photo.jpg",
+      "name": "Павло Ковальчук",
+      "title": "Координатор волонтерів Галицького і Личаківського районів",
+      "facebook": "https://www.facebook.com/profile.php?id=100007670597147"
     }
   ]
 }
