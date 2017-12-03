@@ -1,0 +1,28 @@
+<div class="col-md-3 col-sm-6">
+  <div class="human-block">
+    <div class="human-block_img">
+      <img src="<%= contact.image %>">
+    </div>
+    <div class="human-block_title">
+      <%= contact.name %>
+    </div>
+    <div class="human-block_info">
+      <p><%= contact.title %></p>
+      <% if contact.phone %>
+        <p><%= contact.phone %></p>
+      <% end %>
+      <div class="social-block">
+        <% if contact.facebook %>
+          <a href="<%= contact.facebook %>" target="_blank" class="social_unit small">
+            <i class="icon-facebook"></i>
+          </a>
+        <% end %>
+        <% if contact.email %>
+          <a href="<%= contact.email %>" target="_blank" class="social_unit small">
+            <i class="icon-mail"></i>
+          </a>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
