@@ -285,7 +285,7 @@
 
     var gssReportSheet = new GoogleSpreadsheetsParser('https://docs.google.com/spreadsheets/d/1hdHtbgSzztQ4GgB1wO9D-fNJAVmAOY-GN8nWhvCvAc0/pubhtml', {sheetTitle: 'report_block', hasTitle: true});
 
-    var reportUrl = gssReportSheet && gssReportSheet.contents[0][0];
+    var reportUrl = gssReportSheet && gssReportSheet.contents[0] && gssReportSheet.contents[0][0];
 
     if (reportUrl && (reportUrl.length > 0)) {
       $('*[data-report-url]').each(function(i,val){
@@ -299,7 +299,7 @@
       });
     }
 
-    var reportTextUrl = gssReportSheet && gssReportSheet.contents[0][1];
+    var reportTextUrl = gssReportSheet && gssReportSheet.contents[0] && gssReportSheet.contents[0][1];
 
     if (reportTextUrl && (reportTextUrl.length > 0)) {
       $('*[data-report-url-text]').each(function(i,val){
@@ -307,7 +307,7 @@
       })
     }
 
-    var reportText = gssReportSheet && gssReportSheet.contents[0][2];
+    var reportText = gssReportSheet && gssReportSheet.contents[0] && gssReportSheet.contents[0][2];
 
     if (reportText && (reportText.length > 0)) {
       $('*[data-report-text]').each(function(i,val){
