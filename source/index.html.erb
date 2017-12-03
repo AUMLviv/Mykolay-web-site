@@ -1,0 +1,17 @@
+<%= partial "header" %>
+<%= partial "main_decoration" %>
+
+<main class="main-section">
+  <%= partial(:apply_application, :locals => { :mobile_layout => true }) %>
+  <%= partial(:report_link, :locals => { :mobile_layout => true }) %>
+  <div class="non-transparent-block">
+    <%= partial "how_can_help_section" %>
+    <%= partial "about_action" %>
+    <%= partial "contacts" %>
+    <%= partial "our_support" %>
+    <%= partial "map_section" %>
+  </div>
+  <%= partial(:apply_application, :locals => { :mobile_layout => false }) %>
+  <%= partial(:report_link, :locals => { :mobile_layout => false }) %>
+  <%= partial "footer" %>
+</main>

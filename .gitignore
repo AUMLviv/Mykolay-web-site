@@ -1,5 +1,8 @@
 node_modules
-dist
+build
 .tmp
-bower_components
+source/bower_components
 test/bower_components
+.DS_Store
+.sass-cache
+.keep
