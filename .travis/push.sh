@@ -10,7 +10,7 @@ setup_git() {
 commit_website_files() {
   git checkout -b gh-pages
   rm -rf `ls -A -1 | grep -v -e build -e .git`
-  mv build/{.,}* .
+  mv build/* .
   rm -r build
   git add .
   git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
