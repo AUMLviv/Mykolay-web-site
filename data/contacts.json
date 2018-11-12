@@ -31,36 +31,27 @@
       "email": "nazurti@gmail.com"
     },
     {
-      "image": "images/christina-savchak.jpg",
-      "name": "Христина Савчак",
+      "image": "images/bogdan_babyak.jpg",
+      "name": "Богдан Баб'як",
       "title": "Координатор волонтерів",
-      "phone": "063 807 63 72",
-      "facebook": "https://www.facebook.com/xrustunasavchak"
+      "facebook": "https://www.facebook.com/babyak.bohdan",
+      "email": "bodiababiak@gmail.com"
     },
     {
-      "image": "images/ulia_radetska.jpg",
-      "name": "Юля Радецька",
-      "title": "Координатор Залізничного району",
-      "facebook": "https://www.facebook.com/profile.php?id=100011484286185"
-    },
-    {
-      "image": "images/justyna.sygin.jpg",
-      "name": "Юстина Сигінь",
+      "name": "Мартин Камінецький",
       "title": "Координатор волонтерів Сихівського району",
-      "facebook": "https://www.facebook.com/yustyna.sygin"
+      "facebook": "https://www.facebook.com/martyn.kaminetskyi"
     },
     {
       "image": "images/rostyk.seketa.jpg",
       "name": "Ростик Секета",
-      "title": "Координатор волонтерів Франківського району",
+      "title": "Координатор волонтерів Личаківського району",
       "facebook": "https://www.facebook.com/rseketa"
     },
     {
-      "image": "images/sergey_kozyuk.jpg",
-      "name": "Сергій Козюк",
-      "title": "Відповідальний за концерт",
-      "facebook": "https://www.facebook.com/serhij.kozjuk?fref=ts",
-      "email": "seryjkozyk11@gmail.com"
+      "name": "Андрій Легедза",
+      "title": "Координатор волонтерів Залізничного району",
+      "facebook": "https://www.facebook.com/andriy.lehedza"
     },
     {
       "image": "images/igor-borshovskyy-photo.jpg",
@@ -72,8 +63,21 @@
     {
       "image": "images/pavlo-kovalchuk.jpg",
       "name": "Павло Ковальчук",
-      "title": "Координатор волонтерів Галицького і Личаківського районів",
+      "title": "Координатор волонтерів Франківського району",
       "facebook": "https://www.facebook.com/profile.php?id=100007670597147"
+    },
+    {
+      "image": "images/ulia_radetska.jpg",
+      "name": "Юля Радецька",
+      "title": "Координатор Галицького району",
+      "facebook": "https://www.facebook.com/profile.php?id=100011484286185"
+    },
+    {
+      "image": "images/sergey_kozyuk.jpg",
+      "name": "Сергій Козюк",
+      "title": "Відповідальний за концерт",
+      "facebook": "https://www.facebook.com/serhij.kozjuk?fref=ts",
+      "email": "seryjkozyk11@gmail.com"
     },
     {
       "image": "images/halynka_levchuk.jpg",
