@@ -21,7 +21,7 @@ install:
 cache:
   yarn: true
 script:
-- middleman build
+- bundle exec middleman build
 after_success:
 - ".travis/push.sh"
 env:
