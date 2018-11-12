@@ -1,7 +1,7 @@
 <div class="col-md-3 col-sm-6">
   <div class="human-block">
     <div class="human-block_img">
-      <img src="<%= contact.image %>">
+      <img src="<%= contact.image ? contact.image : 'images/no-human.jpg' %>">
     </div>
     <div class="human-block_title">
       <%= contact.name %>
