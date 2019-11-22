@@ -13,13 +13,13 @@
       <% end %>
       <div class="social-block">
         <% if contact.facebook %>
-          <a href="<%= contact.facebook %>" target="_blank" class="social_unit small">
+          <a href="<%= contact.facebook %>" target="_blank" rel="noreferrer" class="social_unit small">
             <i class="icon-facebook"></i>
           </a>
         <% end %>
         <% if contact.email %>
-          <a href="mailto:<%= contact.email %>" target="_blank" class="social_unit small">
-            <i class="icon-mail"></i>
+          <a href="mailto:<%= contact.email %>" target="_blank" rel="noreferrer" class="social_unit small">
+            <i class="icon-mail4"></i>
           </a>
         <% end %>
       </div>
