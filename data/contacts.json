@@ -16,38 +16,30 @@
       "email": "faryna562pavlo@gmail.com"
     },
     {
-      "image": "images/stasia_hural.jpg",
-      "name": "Стася Гураль",
+      "image": "images/karolinakungurova.jpg",
+      "name": "Кароліна Кунгурова",
       "title": "Координатор по роботі з медіа",
-      "phone": "097 864 03 44",
-      "facebook": "https://www.facebook.com/stasia.gural?fref=ts",
-      "email": "stasia.gural@gmail.com"
+      "facebook": "https://www.facebook.com/karolinakungurova",
+      "phone": "067 472 42 34"
     },
     {
       "image": "images/nazar_dolny.jpg",
       "name": "Назар Дольний",
       "title": "Координатор водіїв; <br> Реєстрація волонтерів",
-      "facebook": "https://www.facebook.com/nazar.dolnyy?fref=ts",
+      "facebook": "https://www.facebook.com/nazar.dolnyy",
       "email": "nazurti@gmail.com"
     },
     {
-      "image": "images/bogdan_babyak.jpg",
-      "name": "Богдан Баб'як",
+      "image": "images/rostyk.seketa.jpg",
+      "name": "Ростик Секета",
       "title": "Координатор волонтерів",
-      "facebook": "https://www.facebook.com/babyak.bohdan",
-      "email": "bodiababiak@gmail.com"
+      "facebook": "https://www.facebook.com/rseketa"
     },
     {
       "image": "images/martyn-kaminetskyi.jpg",
       "name": "Мартин Камінецький",
       "title": "Координатор волонтерів Сихівського району",
       "facebook": "https://www.facebook.com/martyn.kaminetskyi"
-    },
-    {
-      "image": "images/rostyk.seketa.jpg",
-      "name": "Ростик Секета",
-      "title": "Координатор волонтерів Личаківського району",
-      "facebook": "https://www.facebook.com/rseketa"
     },
     {
       "image": "images/legedza.jpg",
@@ -71,7 +63,7 @@
     {
       "image": "images/ulia_radetska.jpg",
       "name": "Юля Радецька",
-      "title": "Координатор волонтерів Галицького району",
+      "title": "Координатор волонтерів Галицького та Личаківського районів",
       "facebook": "https://www.facebook.com/profile.php?id=100011484286185"
     },
     {
@@ -82,20 +74,10 @@
       "email": "seryjkozyk11@gmail.com"
     },
     {
-      "image": "images/halynka_levchuk.jpg",
-      "name": "Галинка Федак",
+      "name": "Марта Хоркава",
       "title": "Співпраця зі школами",
-      "phone": "063 824 98 99",
-      "facebook": "https://www.facebook.com/galynka.levchuk",
-      "email": "ailag@ukr.net"
-    },
-    {
-      "image": "images/nastia_domashovets.jpg",
-      "name": "Настя Домашовець",
-      "title": "Співпраця зі школами",
-      "phone": "063 725 12 00",
-      "facebook": "https://www.facebook.com/ndomusha",
-      "email": "nastiadom97@gmail.com"
+      "phone": "068 775 59 19",
+      "facebook": "https://www.facebook.com/profile.php?id=100008432972556"
     }
   ]
 }

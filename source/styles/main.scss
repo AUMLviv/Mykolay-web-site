@@ -7,11 +7,11 @@ $icon-font-path: '../fonts/';
 
 @font-face {
   font-family: 'icomoon';
-  src:url('../fonts/icomoon.eot?8z39i1');
-  src:url('../fonts/icomoon.eot?8z39i1#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?8z39i1') format('truetype'),
-    url('../fonts/icomoon.woff?8z39i1') format('woff'),
-    url('../fonts/icomoon.svg?8z39i1#icomoon') format('svg');
+  src:url('../fonts/icomoon.eot?wipqfh');
+  src:url('../fonts/icomoon.eot?wipqfh#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?wipqfh') format('truetype'),
+    url('../fonts/icomoon.woff?wipqfh') format('woff'),
+    url('../fonts/icomoon.svg?wipqfh#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -30,20 +30,21 @@ $icon-font-path: '../fonts/';
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-mail4:before {
+  content: "\ea86";
+}
 .icon-facebook:before {
-  content: "\e900";
-}
-.icon-mail:before {
-  content: "\e901";
-}
-.icon-twitter:before {
-  content: "\e902";
+  content: "\ea90";
 }
 .icon-instagram:before {
-  content: "\e903";
+  content: "\ea92";
 }
-
-
+.icon-telegram:before {
+  content: "\ea95";
+}
+.icon-twitter:before {
+  content: "\ea96";
+} 
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -372,7 +373,10 @@ body {
   .icon-instagram {
     font-size: 26px;
   }
-  .icon-mail {
+  .icon-mail4 {
+    font-size: 26px;
+  }
+  .icon-telegram {
     font-size: 26px;
   }
   &.small {
@@ -396,7 +400,10 @@ body {
     .icon-instagram {
       font-size: 18px;
     }
-    .icon-mail {
+    .icon-telegram {
+      font-size: 20px;
+    }
+    .icon-mail4 {
       font-size: 20px;
     }
   }
