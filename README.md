@@ -1,6 +1,6 @@
 # Saint Nicholas charity event site
 
-This is sources for http://www.mykolaj.com.ua site.
+This is sources for https://www.mykolaj.com.ua site.
 
 ## How to contribute and help us?
 
