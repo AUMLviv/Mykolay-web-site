@@ -197,6 +197,10 @@ body {
   margin: 56px 0 0 0;
 }
 
+.highlight {
+   color: #BE402A !important;
+}
+
 .text-with-img {
   text-align: center;
   .text-with-img_img {
@@ -451,9 +455,6 @@ body {
       height: auto;
     }
   }
-}
-.highlight {
-   color: #BE402A;
 }
 .main-menu {
   font-size: 14px;
