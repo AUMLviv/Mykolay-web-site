@@ -5,6 +5,7 @@
   <%= partial(:apply_application, :locals => { :mobile_layout => true }) %>
   <%= partial(:report_link, :locals => { :mobile_layout => true }) %>
   <div class="non-transparent-block">
+    <%= partial "main-message", locals: { mobile_layout: true } %>
     <%= partial "how_can_help_section" %>
     <%= partial "about_action" %>
     <%= partial "contacts" %>

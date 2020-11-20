@@ -1,4 +1,4 @@
-$icon-font-path: '../fonts/';
+$icon-font-path: "../fonts/";
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,300italic&subset=latin,cyrillic");
 
@@ -7,11 +7,8 @@ $icon-font-path: '../fonts/';
 
 @font-face {
   font-family: 'icomoon';
-  src:url('../fonts/icomoon.eot?wipqfh');
-  src:url('../fonts/icomoon.eot?wipqfh#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?wipqfh') format('truetype'),
-    url('../fonts/icomoon.woff?wipqfh') format('woff'),
-    url('../fonts/icomoon.svg?wipqfh#icomoon') format('svg');
+  src: url("../fonts/icomoon.eot?wipqfh");
+  src: url("../fonts/icomoon.eot?wipqfh#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?wipqfh") format("truetype"), url("../fonts/icomoon.woff?wipqfh") format("woff"), url("../fonts/icomoon.svg?wipqfh#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -33,18 +30,22 @@ $icon-font-path: '../fonts/';
 .icon-mail4:before {
   content: "\ea86";
 }
+
 .icon-facebook:before {
   content: "\ea90";
 }
+
 .icon-instagram:before {
   content: "\ea92";
 }
+
 .icon-telegram:before {
   content: "\ea95";
 }
+
 .icon-twitter:before {
   content: "\ea96";
-} 
+}
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -59,6 +60,7 @@ html, body {
 
 body {
   min-width: 320px;
+
   @media (max-width: $screen-md) {
     padding-top: 100px;
   }
@@ -67,9 +69,19 @@ body {
 .main-section {
   position: relative;
   margin-top: 100vh;
+
   @media (max-width: $screen-md) {
     margin-top: 0;
   }
+}
+
+.main-bg-container {
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
 }
 
 .main-bg {
@@ -77,16 +89,22 @@ body {
   top: 0;
   right: 0;
   height: 100%;
-  position: fixed;
-  overflow: hidden;
+  position: absolute;
   background: transparent url("../images/main-bg.jpg") center center no-repeat;
   background-size: cover;
+  z-index: -1;
+
+  &--blurred {
+    filter: blur(5px);
+  }
 }
 
 .main-logo-wrapper {
   position: absolute;
+
   $main-logo-wrapper-width: 754px;
   $main-logo-wrapper-height: 634px;
+
   margin-left: -($main-logo-wrapper-width / 2);
   margin-top: -($main-logo-wrapper-height / 2);
   top: 50%;
@@ -95,6 +113,7 @@ body {
   height: $main-logo-wrapper-height;
   line-height: $main-logo-wrapper-height;
   text-align: center;
+
   &:before, &:after {
     content: "";
     position: absolute;
@@ -102,15 +121,18 @@ body {
     background: transparent url(../images/star-icon.png) 0 0 no-repeat;
     width: 18px;
     height: 18px;
-    margin-left: -(18px/2);
+    margin-left: -(18px / 2);
     z-index: 100;
   }
+
   &:before {
     top: 142px;
   }
+
   &:after {
     bottom: 138px;
   }
+
   canvas {
     display: block;
     position: absolute;
@@ -119,19 +141,27 @@ body {
     right: 0;
     bottom: 0;
   }
+
   .main-logo-wrapper_content {
     display: inline-block;
     vertical-align: middle;
     line-height: 1;
     position: relative;
   }
+
   .main-logo {
     display: block;
     margin-bottom: 28px;
     margin-top: 26px;
   }
+
   @media (max-width: $screen-md) {
     display: none;
+  }
+
+  &--blurred {
+    filter: blur(12px);
+    opacity: 0.8;
   }
 }
 
@@ -141,6 +171,7 @@ body {
 
 .main-block {
   padding: 50px 0 (50 + 26px) 0;
+
   .main-block_h {
     font-size: 36px;
     color: #222;
@@ -149,43 +180,53 @@ body {
     text-align: center;
     text-transform: uppercase;
   }
+
   & + .main-block {
     border-top: 1px solid #E2E2E2;
   }
+
   .main-block_text {
     line-height: 2.6;
     padding: 0 310px;
     text-align: center;
   }
+
   &.main-block--white {
     .main-block_h, .main-block_text {
       color: #fff;
     }
+
     .main-block_text {
       line-height: 1.3;
       margin: 26px 0;
       font-size: 16px;
       padding: 0 200px;
+
       @media (max-width: $screen-md) {
         text-align: center;
       }
+
       @media (max-width: $screen-sm) {
         padding: 0 50px;
       }
     }
   }
+
   &.main-block--without-padding {
     padding-bottom: 0;
   }
+
   @media (max-width: 1199px) {
     .main-block_text {
       padding: 0 100px;
     }
   }
+
   @media (max-width: $screen-md) {
     .main-block_text {
       padding: 0;
       text-align: left;
+
       .bell-illustration {
         text-align: center;
       }
@@ -199,25 +240,30 @@ body {
 
 .text-with-img {
   text-align: center;
+
   .text-with-img_img {
     height: 300px;
     line-height: 300px;
     margin-bottom: 38px;
+
     img {
       display: inline-block;
       vertical-align: bottom;
     }
   }
+
   .text-with-img_h {
     font-size: 20px;
     color: #222;
     line-height: 1;
     margin: 16px 0;
     font-weight: bold;
+
     a {
       color: #BE402A;
     }
   }
+
   .text-with-img_text {
     font-size: 12px;
     color: #777;
@@ -235,25 +281,30 @@ body {
   font-size: 16px;
   line-height: 1.3;
   margin-bottom: 40px;
+
   .human-block_title {
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 6px;
   }
+
   .human-block_img {
     border-radius: 8px;
     overflow: hidden;
     width: 255px;
     height: 255px;
     margin-bottom: 14px;
+
     @media (max-width: 1199px) {
       width: 224px;
       height: 224px;
     }
+
     @media (max-width: $screen-md) {
       display: inline-block;
       vertical-align: middle;
     }
+
     img {
       width: 100%;
     }
@@ -262,10 +313,13 @@ body {
 
 .logos-wrapper {
   text-align: center;
+
   &.small-logos {
     margin-top: 40px;
+
     .logos-unit {
       margin: 12px;
+
       img {
         max-width: 60px;
       }
@@ -281,17 +335,20 @@ body {
 
 .main-form {
   padding: 0 310px;
+
   .form-control {
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(255, 255, 255, 0.7);
     height: 57px;
     font-size: 16px;
     border: none;
     font-weight: 300;
     font-style: italic;
   }
+
   .form-group {
     margin-bottom: 33px;
   }
+
   textarea.form-control {
     height: 120px;
   }
@@ -300,11 +357,13 @@ body {
 .m-btn {
   font-size: 16px;
   line-height: 1.3;
+
   &.m-btn--transparent {
     color: #fff;
     border: 2px solid #fff;
     background-color: transparent;
     padding: 9px 35px;
+
     &:hover, &:active, &:focus, &:active:focus {
       color: #fff;
       border: 2px solid #fff;
@@ -312,11 +371,13 @@ body {
       outline: none;
     }
   }
+
   &.m-btn--red {
     color: #fff;
     border: 2px solid #BE402A;
     background-color: #BE402A;
     padding: 9px 35px;
+
     &:hover, &:active, &:focus, &:active:focus {
       color: #fff;
       border: 2px solid #BE402A;
@@ -353,56 +414,72 @@ body {
   font-size: 0;
   opacity: .9;
   transition: opacity .2s ease;
+
   @media (max-width: $screen-sm) {
     margin: 0 8px 8px 8px;
   }
+
   &:hover, &:active, &:focus {
     color: #DBEFF0;
     text-decoration: none;
     opacity: 1;
   }
+
   & > i {
     line-height: 50px;
   }
+
   .icon-facebook {
     font-size: 32px;
   }
+
   .icon-twitter {
     font-size: 28px;
   }
+
   .icon-instagram {
     font-size: 26px;
   }
+
   .icon-mail4 {
     font-size: 26px;
   }
+
   .icon-telegram {
     font-size: 26px;
   }
+
   &.small {
     width: 30px;
     height: 30px;
     line-height: 30px;
     margin: 0 6px;
     color: #fff;
+
     &:hover, &:active, &:focus {
       color: #fff;
     }
+
     & > i {
       line-height: 30px;
     }
+
     .icon-facebook {
       font-size: 22px;
     }
+
     .icon-twitter {
       font-size: 20px;
     }
+
     .icon-instagram {
       font-size: 18px;
     }
+
     .icon-telegram {
       font-size: 20px;
     }
+
     .icon-mail4 {
       font-size: 20px;
     }
@@ -417,33 +494,41 @@ body {
   height: 50px;
   line-height: 50px;
   z-index: 2000;
-  background-color: rgba(255,255,255,.9);
+  background-color: rgba(255, 255, 255, 0.9);
   transition: height .2s ease, line-height .2s ease, background .2s ease;
-  box-shadow: 0px 2px 10px 0px rgba(73,73,73,0.10);
+  box-shadow: 0px 2px 10px 0px rgba(73, 73, 73, 0.1);
+
   .main-header-logo {
     opacity: 0;
     transition: opacity .2s ease;
   }
+
   &.sticky {
-    background-color: rgba(255,255,255,1);
+    background-color: rgba(255, 255, 255, 1);
+
     .main-header-logo {
       opacity: 1;
     }
+
     height: 100px;
     line-height: 100px;
     position: fixed;
   }
+
   @media (max-width: $screen-md) {
-    background-color: rgba(255,255,255,1);
+    background-color: rgba(255, 255, 255, 1);
+
     .main-header-logo {
       opacity: 1;
     }
+
     height: auto;
     padding: 18px 0;
     line-height: 1;
     position: fixed;
   }
 }
+
 .js-main-menu {
   &.collapse {
     @media (min-width: $screen-md + 1) {
@@ -452,47 +537,57 @@ body {
     }
   }
 }
+
 .main-menu {
   font-size: 14px;
   text-transform: uppercase;
   line-height: 1;
   display: inline-block;
   vertical-align: middle;
+
   @media (max-width: 1199px) {
     font-size: 12px;
   }
+
   ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+
     li {
       display: inline-block;
       vertical-align: middle;
       margin-left: 38px;
+
       a {
         display: block;
         color: #4A4A4A;
         transition: color .2s ease;
+
         &:hover, &:active, &:focus {
           text-decoration: none;
-          color: lighten(#4A4A4A,15);
+          color: lighten(#4A4A4A, 15);
         }
+
         &.highlight {
           color: #BE402A;
         }
       }
     }
   }
+
   @media (max-width: $screen-md) {
     // display: none;
     display: block;
     font-size: 16px;
     text-align: left;
     padding: 20px 0;
+
     ul {
       li {
         display: block;
         margin-left: 0;
+
         a {
           padding: 10px 20px 10px 0;
         }
@@ -507,7 +602,6 @@ body {
   height: 100%;
 }
 
-
 //----- Header styling -----
 // Change this to fit your needs
 // This example is assuming that you are using the hamburger menu button in the header
@@ -517,8 +611,6 @@ body {
   top: 40px;
   right: 20%;
 }
-
-
 
 //----- Hamburger component -----
 
@@ -537,6 +629,7 @@ $hamburger__colour: #000;
   height: $hamburger__height;
   z-index: 2;
   margin-top: 17px;
+
   .hamburger__inner {
     background: none;
     display: block;
@@ -557,12 +650,14 @@ $hamburger__colour: #000;
       -webkit-transition: all 0.4s ease-in-out;
       transition: all 0.4s ease-in-out;
     }
+
     &::before {
       -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
       transform: rotate(-45deg);
       top: $hamburger__layer__height * 2;
     }
+
     &::after {
       -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
@@ -574,12 +669,14 @@ $hamburger__colour: #000;
   &.collapsed {
     .hamburger__inner {
       background: $hamburger__colour;
+
       &::before {
         -webkit-transform: rotate(0);
         -ms-transform: rotate(0);
         transform: rotate(0);
         top: 0;
       }
+
       &::after {
         -webkit-transform: rotate(0);
         -ms-transform: rotate(0);
@@ -588,4 +685,18 @@ $hamburger__colour: #000;
       }
     }
   }
+}
+
+.main-dialog-message-container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 1.6rem;
 }
