@@ -4,7 +4,6 @@
       "image": "images/christina_dolna.jpg",
       "name": "Христина Дольна",
       "title": "Координатор Акції",
-      "phone": "097 66 00 567",
       "facebook": "https://www.facebook.com/christina.paprotska?fref=ts",
       "email": "christine_p_a@yahoo.com"
     },
@@ -19,8 +18,7 @@
       "image": "images/karolinakungurova.jpg",
       "name": "Кароліна Кунгурова",
       "title": "Координатор по роботі з медіа",
-      "facebook": "https://www.facebook.com/karolinakungurova",
-      "phone": "067 472 42 34"
+      "facebook": "https://www.facebook.com/karolinakungurova"
     },
     {
       "image": "images/nazar_dolny.jpg",
@@ -76,7 +74,6 @@
     {
       "name": "Марта Хоркава",
       "title": "Співпраця зі школами",
-      "phone": "068 775 59 19",
       "facebook": "https://www.facebook.com/profile.php?id=100008432972556"
     }
   ]
