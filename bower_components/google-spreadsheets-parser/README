@@ -1,0 +1,67 @@
+<p><img src="https://circleci.com/gh/tanakaworld/google-spreadsheets-parser.svg?style=shield&amp;circle-token=0ef40ae186ef9cc9aa40b96d2ad5b6ddeeed272d" alt="build status" /></p>
+
+<h1 id="google-spreadsheets-parser">google-spreadsheets-parser</h1>
+<p>Simple Google Spreadsheets parser for JavaScript</p>
+
+<h2 id="installation">Installation</h2>
+
+<h4 id="npm">NPM</h4>
+<p><code>
+npm install google-spreadsheets-parser
+</code></p>
+
+<h4 id="bower">Bower</h4>
+<p><code>
+bower install google-spreadsheets-parser
+</code></p>
+
+<h4 id="manual-download">Manual Download</h4>
+<p>Download from <a href="https://github.com/TanakaYutaro/google-spreadsheets-parser/releases">here</a></p>
+
+<h2 id="introduction">Introduction</h2>
+
+<ol>
+  <li>Create new Google Spreadsheet</li>
+</ol>
+
+<p><img src="https://raw.githubusercontent.com/wiki/TanakaYutaro/google-spreadsheets-parser/img/intro-1.png" alt="intro-1" /></p>
+
+<ol>
+  <li>Publish spreadsheet</li>
+</ol>
+
+<p><img src="https://raw.githubusercontent.com/wiki/TanakaYutaro/google-spreadsheets-parser/img/intro-2.png" alt="intro-2" /></p>
+
+<p>You can show following tables from <a href="https://docs.google.com/spreadsheets/d/1vyPu1EtzU1DvGXfthjrR-blJ8mGe75TL4BFNWtFMm0I/pubhtml">published url</a></p>
+
+<p><img src="https://raw.githubusercontent.com/wiki/TanakaYutaro/google-spreadsheets-parser/img/intro-3.png" alt="intro-3" /></p>
+
+<ol>
+  <li>Import googleSpreadsheetsParser.js in header</li>
+</ol>
+
+<p><code>html
+  &lt;script type="text/javascript" src="/path/to/googleSpreadsheetsParser.js"&gt;&lt;/script&gt;
+ </code></p>
+
+<ol>
+  <li>Get data</li>
+</ol>
+
+<p>```javascript
+  var gss = new GoogleSpreadsheetsParser(publishedUrl, {sheetTitle: 'Sample', hasTitle: true});</p>
+
+<p>console.log(gss.titles);          // ["ID", "Name", "Age"]
+  console.log(gss.contents);        // [Array[3], Array[3], Array[3], Array[3], Array[3]]
+  console.log(gss.contents[2][1]);  // Doug
+  ```</p>
+
+<h2 id="features">Features</h2>
+
+<ul>
+  <li><code>.titles</code> : Table titles array in the frst row.</li>
+  <li><code>.contents</code> : Table data 2d array in the second row later.</li>
+</ul>
+
+<h1 id="demo">Demo</h1>
+<p><a href="http://tanakaworld.github.io/google-spreadsheets-parser/demo/">Demo</a></p>

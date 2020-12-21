@@ -1,0 +1,150 @@
+(function() {
+  describe(GoogleSpreadsheetsUtil, function() {
+    beforeAll(function() {
+      this.publishedUrl = "https://docs.google.com/spreadsheets/d/1vyPu1EtzU1DvGXfthjrR-blJ8mGe75TL4BFNWtFMm0I/pubhtml";
+      this.key = "1vyPu1EtzU1DvGXfthjrR-blJ8mGe75TL4BFNWtFMm0I";
+      this.firstWorksheetId = "od6";
+      this.secondWorksheetId = "obeh737";
+      return this.util = new GoogleSpreadsheetsUtil();
+    });
+    describe('.extractKey', function() {
+      describe('published url is valid', function() {
+        return it('should got key', function() {
+          return expect(this.util.extractKey(this.publishedUrl)).toEqual(this.key);
+        });
+      });
+      return describe('published url is invalid', function() {
+        return it('should got null', function() {
+          return expect(this.util.extractKey("https://invalid-url.com")).toBeNull();
+        });
+      });
+    });
+    describe('.getWorksheetId', function() {
+      beforeEach(function() {
+        return jasmine.Ajax.install();
+      });
+      afterEach(function() {
+        return jasmine.Ajax.uninstall();
+      });
+      describe('Spreadsheet is found', function() {
+        beforeEach(function() {
+          var mockedSampleDataBasicJson, requestUrl;
+          mockedSampleDataBasicJson = window.__fixtures__['spec/fixtures/sampleDataBasic'];
+          requestUrl = "https://spreadsheets.google.com/feeds/worksheets/" + this.key + "/public/basic?alt=json";
+          return jasmine.Ajax.stubRequest(requestUrl).andReturn({
+            status: 200,
+            responseText: JSON.stringify(mockedSampleDataBasicJson)
+          });
+        });
+        describe('without sheet name', function() {
+          return it('should got worksheetId', function() {
+            return expect(this.util.getWorksheetId(this.key)).toEqual(this.firstWorksheetId);
+          });
+        });
+        describe('with sheet name (1st sheet)', function() {
+          return it('should got worksheetId', function() {
+            return expect(this.util.getWorksheetId(this.key, 'Sample')).toEqual(this.firstWorksheetId);
+          });
+        });
+        return describe('with sheet name (2nd sheet)', function() {
+          return it('should got worksheetId', function() {
+            return expect(this.util.getWorksheetId(this.key, 'Sample2')).toEqual(this.secondWorksheetId);
+          });
+        });
+      });
+      return describe('Spreadsheet is not found', function() {
+        beforeEach(function() {
+          var requestUrl;
+          requestUrl = "https://spreadsheets.google.com/feeds/worksheets/" + this.key + "/public/basic?alt=json";
+          return jasmine.Ajax.stubRequest(requestUrl).andReturn({
+            status: 404
+          });
+        });
+        describe('without sheet name', function() {
+          return it('should got null', function() {
+            return expect(this.util.getWorksheetId(this.key)).toBeNull();
+          });
+        });
+        return describe('with sheet name (Invalid)', function() {
+          return it('should got null', function() {
+            return expect(this.util.getWorksheetId(this.key, 'Invalid')).toBeNull();
+          });
+        });
+      });
+    });
+    describe('.getFeeds', function() {
+      beforeEach(function() {
+        return jasmine.Ajax.install();
+      });
+      afterEach(function() {
+        return jasmine.Ajax.uninstall();
+      });
+      describe('Spreadsheet is found', function() {
+        beforeEach(function() {
+          var mockedSampleDataFeedJson, requestUrl;
+          mockedSampleDataFeedJson = window.__fixtures__['spec/fixtures/sampleDataFeed'];
+          requestUrl = "https://spreadsheets.google.com/feeds/cells/" + this.key + "/" + this.firstWorksheetId + "/public/values?alt=json";
+          return jasmine.Ajax.stubRequest(requestUrl).andReturn({
+            status: 200,
+            responseText: JSON.stringify(mockedSampleDataFeedJson)
+          });
+        });
+        return it('should got feeds', function() {
+          return expect(this.util.getFeeds(this.key, this.firstWorksheetId)).not.toBeNull();
+        });
+      });
+      return describe('Spreadsheet is not found', function() {
+        beforeEach(function() {
+          var requestUrl;
+          requestUrl = "https://spreadsheets.google.com/feeds/cells/" + this.key + "/" + this.firstWorksheetId + "/public/values?alt=json";
+          return jasmine.Ajax.stubRequest(requestUrl).andReturn({
+            status: 404
+          });
+        });
+        return it('should got feeds', function() {
+          return expect(this.util.getFeeds(this.key, this.firstWorksheetId)).toBeNull();
+        });
+      });
+    });
+    describe('.makeTitle', function() {
+      beforeEach(function() {
+        return this.feedEntry = window.__fixtures__['spec/fixtures/sampleDataFeed'].feed.entry;
+      });
+      describe('DataFeed is valid', function() {
+        return it('should got titles array', function() {
+          var titles;
+          titles = this.util.makeTitle(this.feedEntry);
+          return expect(titles).toHaveSameItems(["ID", "Name", "Age"]);
+        });
+      });
+      return describe('DataFeed is invalid', function() {
+        return it('should got empty array', function() {
+          var titles;
+          titles = this.util.makeTitle({});
+          return expect(titles.length).toBe(0);
+        });
+      });
+    });
+    return describe('.makeContents', function() {
+      beforeEach(function() {
+        return this.feedEntry = window.__fixtures__['spec/fixtures/sampleDataFeed'].feed.entry;
+      });
+      describe('DataFeed is valid', function() {
+        return it('should got contents 2d array', function() {
+          var contents, expected;
+          contents = this.util.makeContents(this.feedEntry);
+          expected = [['1', 'Mike', '24'], ['2', 'Chris', '28'], ['3', 'Doug', '34'], ['4', 'Vlade', '21'], ['5', 'Peja', '37']];
+          return expect(contents).toHaveSameItems(expected);
+        });
+      });
+      return describe('DataFeed is invalid', function() {
+        return it('should got empty array', function() {
+          var contents;
+          contents = this.util.makeContents({});
+          return expect(contents).toHaveSameItems([]);
+        });
+      });
+    });
+  });
+
+}).call(this);
